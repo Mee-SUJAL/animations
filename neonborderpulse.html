@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Border Pulse Effect</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: #111;
+            font-family: Arial, sans-serif;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            width: 300px;
+            height: 200px;
+            background: #222;
+            border-radius: 15px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            font-size: 1.2rem;
+            box-shadow: 0 0 20px rgba(255, 0, 255, 0.3), 
+                        0 0 30px rgba(0, 255, 255, 0.3), 
+                        0 0 20px rgba(255, 182, 193, 0.3);
+            animation: shadowPulse 3s infinite;
+        }
+
+        /* Keyfranme adjustment */
+        @keyframes shadowPulse {
+            0% {
+                box-shadow: 0 0 20px rgba(255, 0, 255, 0.3), 
+                            0 0 30px rgba(0, 255, 255, 0.3), 
+                            0 0 40px rgba(255, 182, 193, 0.3);
+            }
+            50% {
+                box-shadow: 0 0 40px rgba(255, 0, 255, 0.5), 
+                            0 0 60px rgba(0, 255, 255, 0.5), 
+                            0 0 80px rgba(255, 182, 193, 0.5);
+            }
+            100% {
+                box-shadow: 0 0 20px rgba(255, 0, 255, 0.3), 
+                            0 0 30px rgba(0, 255, 255, 0.3), 
+                            0 0 40px rgba(255, 182, 193, 0.3);
+            }
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">Neon Glow Card 1</div>
+        <div class="card">Neon Glow Card 2</div>
+        <div class="card">Neon Glow Card 3</div>
+        <div class="card">Neon Glow Card 4</div>
+    </div>
+</body>
+</html>

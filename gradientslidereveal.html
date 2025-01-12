@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Slide Reveal Effect</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: black;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            gap: 50px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            position: relative;
+            width: 300px;
+            height: 450px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #ff7eb3, #ffef78);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 15px;
+            padding: 3px;
+            background: linear-gradient(270deg, #ff00ff, #00ffff, #ffb6c1);
+            background-size: 400% 400%;
+            animation: pulse 6s infinite;
+            -webkit-mask: 
+                linear-gradient(#fff 0 0) content-box, 
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: destination-out;
+            mask-composite: exclude;
+        }
+
+        @keyframes pulse {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        .card:hover {
+			transform: translateY(-25px);
+            box-shadow: 0 0 20px rgba(7, 251, 88, 0.3), 
+                        0 0 50px rgba(19, 30, 238, 0.3), 
+                        0 0 40px rgba(255, 182, 193, 0.3);
+        }
+
+        .header {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            transition: color 0.5s ease;
+        }
+        img{
+            height: 200px;
+            width: 200px;
+            margin: none;
+        }
+
+        .card:hover .header {
+            color: #333;
+        }
+
+        .content {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            transition: color 1s ease;
+        }
+
+        .card:hover .content {
+            color: #333;
+        }
+
+        .content h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .content p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            transition: background 0.3s ease;
+        }
+
+        .button:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+        .images{
+            width: 250px;
+            margin-left: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="header">Gradient Effect</div>
+            <div class="content">
+                <h2>Reveal the Gradient</h2>
+                <img src="images/IMG_20240820_151617_275.jpg">
+                <p>Hover to see the background transition smoothly!</p>
+                <a href="#" class="button">Learn More</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="header">Dynamic Design</div>
+            <div class="content">
+                <h2>Modern Animation</h2>
+                <img class="images" src="images/IMG_20240820_151617_275.jpg">
+                <p>Experience vibrant and refreshing gradients.</p>
+                <a href="#" class="button">Learn More</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0c8be7, #e7242e);
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            position: relative;
+            width: 300px;
+            height: 400px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #6a5acd, #32cd32);
+            box-shadow: 0 8px 15px rgba(50, 205, 50, 0.4);
+            transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: perspective(1000px)  rotateY(20deg) rotateX(50deg);
+            box-shadow: 0 15px 30px rgba(50, 205, 50, 0.6);
+			border: 2px solid #333;
+
+	    }
+
+        .header {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .content {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+        }
+
+        .content h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .content p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            transition: background 0.3s ease;
+        }
+
+        .button:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+

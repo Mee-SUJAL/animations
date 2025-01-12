@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow Lift Hover Effect</title>
+    <style>
+        body {
+            margin: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(180deg, #2222ff, #000000);
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            position: relative;
+            width: 300px;
+            height: 400px;
+			font-family: 'Courier New', Courier, monospace;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #13e258, #cc17a8);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-25px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5), 0 10px 40px;
+			border: 2px solid white;
+
+        }
+
+        .header {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: #333;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .content {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: #333;
+        }
+
+        .content h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .content p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background: rgba(138, 43, 226, 0.8);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            transition:  0.3s ease;
+        }
+
+        .button:hover {
+            background: rgba(241, 240, 246, 0.9);
+			border: 0.5px solid rgb(0, 0, 0);
+			color: #000000;
+        }
+		.card2{
+			position: relative;
+            width: 300px;
+            height: 400px;
+			margin-left: 50px;
+			font-family: 'Courier New', Courier, monospace;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #1ec031, #173ecc);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
+		.card2:hover {
+            transform: translateY(-25px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5), 0 10px 40px;
+			border: 2px solid white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="header">Shadow Lift</div>
+            <div class="content">
+                <h2>Interactive Card</h2>
+                <p>Hover to see the shadow lift effect!</p>
+                <a href="#" class="button">Learn More</a>
+            </div>
+        </div>
+        <div class="card2">
+            <div class="header">Modern Design</div>
+            <div class="content">
+                <h2>Depth and Style</h2>
+                <p>Experience the modern hover effect.</p>
+                <a href="#" class="button">Learn More</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
